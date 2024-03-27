@@ -1,0 +1,3 @@
+{
+  "my-flow": "flows/test_flow.py:my_flow"
+}
