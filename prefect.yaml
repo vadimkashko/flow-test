@@ -14,8 +14,10 @@ push: null
 
 # pull section allows you to provide instructions for cloning this project in remote locations
 pull:
-- prefect.deployments.steps.set_working_directory:
-    directory: /home/vadz1mka/work/training_data/gitlab/TD/business_intelligence/dwh/prefect-test
+- prefect.deployments.steps.git_clone:
+    repository: git@gitlab.trainingdata.int:td/business-intelligence/dwh/prefect-test.git
+    branch: main
+    access_token: null
 
 # the deployments section allows you to provide configuration for deploying flows
 deployments:
