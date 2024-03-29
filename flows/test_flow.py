@@ -24,11 +24,11 @@ if __name__ == "__main__":
     # print(gitlab_credentials_block.token.get_secret_value())
     # print(gitlab_credentials_block.url)
     # print(gitlab_repository_block._create_repo_url())
-    # my_flow.from_source(
-    #     source="https://prefect:glpat-nzcQr3RS9hzzAzzjpkn2@gitlab.trainingdata.int/td/business-intelligence/dwh/prefect-test.git",
-    #     entrypoint="flows/test_flow.py:my_flow",
-    # ).deploy(
-    #     name="deployment",
-    #     work_pool_name="td-analysts",
-    # )
-    my_flow()
+    my_flow.from_source(
+        source="https://prefect:glpat-nzcQr3RS9hzzAzzjpkn2@gitlab.trainingdata.int/td/business-intelligence/dwh/prefect-test.git",
+        entrypoint="flows/test_flow.py:my_flow",
+    ).deploy(
+        name="deployment",
+        work_pool_name="td-analysts",
+    )
+    # my_flow()
